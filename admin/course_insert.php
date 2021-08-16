@@ -1,3 +1,5 @@
+
+
 <?php 
   
 
@@ -101,8 +103,6 @@
 
               <div class="form-layout-footer">
                 <button class="btn btn-info mg-r-5" type="submit" name="btn-course_insert">Submit</button>
-                <a href="course_list.php" class="btn btn-dark">Back</a>
-                
               </div><!-- form-layout-footer -->
 
               <?php
