@@ -2,7 +2,7 @@
 
 	require '../db_config.php';
 	
-	//admin login
+	//admin login with correct data
 	if(isset($_POST['btn-login_admin']))
 	{
 		$email = $_POST['email'];
@@ -17,7 +17,7 @@
 
 		if($row['count(*)']=="1")
 		{
-
+		// if data is matched we tak admin info in session
 			session_start();
 			$_SESSION['admin']="VERIFIED";
 			$_SESSION['admin_id']=$row['id'];
