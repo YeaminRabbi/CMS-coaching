@@ -104,7 +104,7 @@
                       <td>
                         
                         <a href="course_edit.php?course_id=<?= $data['id'] ?>" class="btn btn-primary">Edit</a>
-                        <a href="action.php?course_delete=<?= $data['id'] ?>&img=<?= $data['image'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this course?');">Delete</a>
+                        <a href="" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
 
                       </td>
                     </tr>

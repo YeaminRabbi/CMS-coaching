@@ -37,7 +37,7 @@
 	        </div><!-- form-group -->
         
         <button type="submit" name="btn-login_admin" class="btn btn-info btn-block">Sign In</button>
-<!-- this is for wrong input -->
+
         <?php
 
             if(isset($_GET['msg']))
