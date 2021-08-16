@@ -20,8 +20,8 @@
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-          <li class="nav-item"><a href="chart-morris.html" class="nav-link">Insert</a></li>
-          <li class="nav-item"><a href="chart-flot.html" class="nav-link">List</a></li>
+          <li class="nav-item"><a href="course_insert.php" class="nav-link">Insert</a></li>
+          <li class="nav-item"><a href="course_list.php" class="nav-link">List</a></li>
         </ul>
 
         

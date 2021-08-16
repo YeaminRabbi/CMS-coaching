@@ -17,3 +17,7 @@
     <script src="js/starlight.js"></script>
     <script src="js/ResizeSensor.js"></script>
     <script src="js/dashboard.js"></script>
+
+
+    <script src="lib/datatables/jquery.dataTables.js"></script>
+    <script src="lib/datatables-responsive/dataTables.responsive.js"></script>

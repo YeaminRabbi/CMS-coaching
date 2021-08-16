@@ -13,13 +13,31 @@
             <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
 
               <!-- for mobile view only first name class="hidden-md-down" -->
-              <span class="logged-name">Admin</span>
+              <span class="logged-name">
+                <?php 
+  
+
+                  
+
+                  if(!empty($_SESSION['admin']))
+                  {
+                  
+                    print($_SESSION['admin_name']);
+                  }
+                  else
+                  {
+                    header('Location: login.php');
+
+                  }
+
+
+              ?>
+              </span>
               <img src="img/img3.jpg" class="wd-32 rounded-circle" alt="">
             </a>
             <div class="dropdown-menu dropdown-menu-header wd-200">
               <ul class="list-unstyled user-profile-nav">
-               
-                <li><a href=""><i class="icon ion-power"></i> Sign Out</a></li>
+                <li><a href="logout.php"><i class="icon ion-power"></i> Sign Out</a></li>
               </ul>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->
