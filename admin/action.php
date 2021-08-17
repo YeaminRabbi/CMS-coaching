@@ -34,7 +34,7 @@
 	}
 
 
-
+	//course insert
 	if(isset($_POST['btn-course_insert'])){
 		$course_name = $_POST['course_name'];
 		$course_details = $_POST['course_details'];
@@ -86,6 +86,8 @@
 		}
 	}
 
+
+	//course update
 	if(isset($_POST['CourseUpdate'])){
 
 		$course_name = $_POST['course_name'];
@@ -143,6 +145,23 @@
 		}
 
 
+
+	}
+
+
+	//course delete
+	if(isset($_GET['course_delete']))
+	{
+		$course_id = $_GET['course_delete'];
+		$course_image = $_GET['img'];
+
+
+		unlink($course_image);
+
+		$sql = "delete from course where id='$course_id';";
+		$db->query($sql);
+
+		header("Location: course_list.php?delete=on");
 
 	}
 
