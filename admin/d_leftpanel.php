@@ -15,7 +15,7 @@
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="fa fa-book" aria-hidden="true"></i>
-            <span class="menu-item-label">Faculty</span>
+            <span class="menu-item-label">Course</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
