@@ -188,14 +188,25 @@
 		} else {
 			  header('Location: batch_insert.php?error=on');
 		}
+	}
 
 
+	//faculty insertion code
+	if(isset($_POST['btn-faculty_insert'])){
+		$faculty_name = $_POST['faculty_name'];
+		$age = $_POST['age'];
+		$email = $_POST['email'];
+		$contact = $_POST['contact'];
+		$skills = $_POST['skills'];
 
+		$sql = "INSERT INTO faculty (faculty_name, age, email,contact,skills) VALUES ('$faculty_name','$age','$email', '$contact', '$skills')";
 
-
-		
-
-
+		if ($db->query($sql) === TRUE) {
+				header('Location: faculty_insert.php?success=on');
+			 
+		} else {
+			  header('Location: faculty_insert.php?error=on');
+		}
 
 	}
 

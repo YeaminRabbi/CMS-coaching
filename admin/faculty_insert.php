@@ -35,7 +35,7 @@
   <div class="sl-mainpanel">
     <nav class="breadcrumb sl-breadcrumb">
       <a class="breadcrumb-item" href="index.php">CMS</a>
-      <span class="breadcrumb-item active">Create Batch</span>
+      <span class="breadcrumb-item active">Faculty Information</span>
     </nav>
 
     <div class="sl-pagebody"><!-- MAIN CONTENT -->
@@ -106,8 +106,8 @@
 
                 <div class="col-lg-4">
                   <div class="form-group">
-                    <label class="form-control-label" style="color:black;">Expertise In: </label>
-                    <input class="form-control" type="text" name="expertise" placeholder="PHP, C, JAVA, Graphics Design, Web development" required>
+                    <label class="form-control-label" style="color:black;">Skills: </label>
+                    <input class="form-control" type="text" name="skills" placeholder="PHP, C, JAVA, Graphics Design, Web development" required>
                   </div>
                 </div><!-- col-4 -->
 
@@ -116,7 +116,7 @@
               </div><!-- row -->
 
               <div class="form-layout-footer">
-                <button class="btn btn-info mg-r-5" type="submit" name="btn-batch_insert">Submit</button>
+                <button class="btn btn-info mg-r-5" type="submit" name="btn-faculty_insert">Submit</button>
                 <a href="batch_list.php" class="btn btn-dark">Back</a>
                 
               </div><!-- form-layout-footer -->
