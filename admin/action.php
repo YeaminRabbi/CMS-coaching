@@ -171,6 +171,28 @@
 		$batch_code = $_POST['batch_code'];
 		$batch_name = $_POST['batch_name'];
 		$seat = $_POST['seat'];
+		$schedule_day = $_POST['schedule_day'];
+		$schedule_time = $_POST['schedule_time'];
+		$course_id = $_POST['course_id'];
+		$amount = $_POST['amount'];
+		$faculty = $_POST['faculty'];
+		$starting_date = $_POST['starting_date'];
+		$ending_date = $_POST['ending_date'];
+
+
+		$sql = "INSERT INTO batch (batch_code, batch_name, seat,schedule_day,schedule_time,course_id,amount,faculty,starting_date,ending_date) VALUES ('$batch_code','$batch_name','$seat', '$schedule_day', '$schedule_time', '$course_id','$amount','$faculty','$starting_date', '$ending_date')";
+
+		if ($db->query($sql) === TRUE) {
+				header('Location: batch_insert.php?success=on');
+			 
+		} else {
+			  header('Location: batch_insert.php?error=on');
+		}
+
+
+
+
+
 		
 
 

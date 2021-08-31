@@ -129,7 +129,7 @@
                   <div class="form-group">
                     <label class="form-control-label" style="color:black;">Course: </label>
                     
-                    <select class="form-control" name="schedule_day">
+                    <select class="form-control" name="course_id">
                       <option >--Select Option--</option>
                       
                       <?php 
