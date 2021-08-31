@@ -15,7 +15,7 @@
     }
 
 
-    $batch_list = fetch_all_data_usingPDO($pdo,"SELECT * FROM course join batch on batch.course_id=course.id order by batch.id DESC");
+    $batch_list = fetch_all_data_usingPDO($pdo,"SELECT *,batch.id as BID FROM course join batch on batch.course_id=course.id join faculty on batch.faculty=faculty.id order by batch.id DESC");
 
   
 
@@ -68,7 +68,7 @@
 
            <div class="alert alert-danger alert-dismissible" style="height: 50px;">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-             Letter Deleted Successfully!
+             Deleted Successfully!
           </div>
           <?php 
             }
@@ -104,12 +104,13 @@
                       <td><?php echo $data['batch_name']; ?></td>
                       <td><?php echo $data['seat']; ?></td>
                       <td><?php echo $data['course_name']; ?></td>
-                      <td><?php echo $data['faculty']; ?></td>
+                      <td><?php echo $data['faculty_name']; ?></td>
                       
                       <td>
                         
-                        <a href="course_edit.php?course_id=<?= $data['id'] ?>" class="btn btn-primary">Edit</a>
-                        <a href="action.php?course_delete=<?= $data['id'] ?>&img=<?= $data['image'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this course?');">Delete</a>
+                        <a href="batch_edit.php?batch_id=<?= $data['id'] ?>" class="btn btn-primary">Edit</a>
+                       
+                        <a href="action.php?batch_delete=<?= $data['BID'] ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this course?');">Delete</a>
 
                       </td>
                     </tr>

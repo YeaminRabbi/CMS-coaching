@@ -241,6 +241,19 @@
 
 		header("Location: faculty_list.php?delete=on");
 
-
 	}
+
+
+	//deleting a batch with ID
+	if(isset($_GET['batch_delete'])){
+
+		$id = $_GET['batch_delete'];
+		$sql = "delete from batch where id='$id';";
+		$db->query($sql);
+
+		header("Location: batch_list.php?delete=on");
+	}
+
+
+
 ?>
