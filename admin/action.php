@@ -210,4 +210,25 @@
 
 	}
 
+
+	//updating the faculty information
+	if(isset($_POST['btn-faculty_update'])){
+		
+		$faculty_name = $_POST['faculty_name'];
+		$age = $_POST['age'];
+		$email = $_POST['email'];
+		$contact = $_POST['contact'];
+		$skills = $_POST['skills'];
+
+		$faculty_id= $_POST['faculty_id'];
+
+		$sql = "UPDATE `faculty` SET faculty_name = '$faculty_name' , age = '$age', email = '$email',contact = '$contact', skills = '$skills'  WHERE id='$faculty_id'";
+
+		$db->query($sql);
+		header("Location: faculty_edit.php?faculty_id=$faculty_id&update=on");
+
+
+
+	}
+
 ?>
