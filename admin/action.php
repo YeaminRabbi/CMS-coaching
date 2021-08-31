@@ -231,4 +231,16 @@
 
 	}
 
+
+	//deleting a faculty with ID
+	if(isset($_GET['faculty_delete']))
+	{
+		$id = $_GET['faculty_delete'];
+		$sql = "delete from faculty where id='$id';";
+		$db->query($sql);
+
+		header("Location: faculty_list.php?delete=on");
+
+
+	}
 ?>
