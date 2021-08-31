@@ -165,4 +165,16 @@
 
 	}
 
+
+	//batch insert code
+	if(isset($_POST['btn-batch_insert'])){
+		$batch_code = $_POST['batch_code'];
+		$batch_name = $_POST['batch_name'];
+		$seat = $_POST['seat'];
+		
+
+
+
+	}
+
 ?>

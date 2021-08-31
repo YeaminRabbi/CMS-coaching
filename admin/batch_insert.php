@@ -113,7 +113,7 @@
                   <div class="form-group">
                     <label class="form-control-label" style="color:black;">Schedule Time: </label>
                     
-                    <select class="form-control" name="schedule_day">
+                    <select class="form-control" name="schedule_time">
                       <option >--Select Option--</option>
                       <option value="8:30am-10:00pm">8:30am-10:00pm</option>
                       <option value="10:30am-12:00pm">10:30am-12:00pm</option>
@@ -148,15 +148,15 @@
                   </div>
                 </div><!-- col-4 -->
 
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" style="color:black;">Amount: </label>
                     <input class="form-control" type="number" min="1" name="amount" required>
                   </div>
-                </div><!-- col-4 -->
+                </div><!-- col-6 -->
 
 
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                   <div class="form-group">
                     <label class="form-control-label" style="color:black;">Faculty: </label>
                      <select class="form-control" name="faculty">
@@ -167,13 +167,28 @@
                         <option value="Imran">Imran</option>
                       </select>
                   </div>
-                </div><!-- col-4 -->
+                </div><!-- col-6 -->
+
+
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" style="color:black;">Starting Date: </label>
+                    <input class="form-control" type="date"  name="starting_date" required>
+                  </div>
+                </div><!-- col-6 -->
+
+                 <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label" style="color:black;">Ending Date: </label>
+                    <input class="form-control" type="date"  name="ending_date" required>
+                  </div>
+                </div><!-- col-6 -->
 
               </div><!-- row -->
 
               <div class="form-layout-footer">
-                <button class="btn btn-info mg-r-5" type="submit" name="btn-course_insert">Submit</button>
-                <a href="course_list.php" class="btn btn-dark">Back</a>
+                <button class="btn btn-info mg-r-5" type="submit" name="btn-batch_insert">Submit</button>
+                <a href="batch_list.php" class="btn btn-dark">Back</a>
                 
               </div><!-- form-layout-footer -->
 
