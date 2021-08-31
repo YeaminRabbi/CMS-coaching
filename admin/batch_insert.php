@@ -16,6 +16,9 @@
     }
 
     $course_list = fetch_all_data_usingPDO($pdo, "select * from course order by id DESC");
+
+    $faculty_list = fetch_all_data_usingPDO($pdo, "select * from faculty order by id DESC");
+
 ?>
 
 
@@ -161,10 +164,18 @@
                     <label class="form-control-label" style="color:black;">Faculty: </label>
                      <select class="form-control" name="faculty">
                         <option >--Select Option--</option>
-                        <option value="Shohel">Shohel</option>
-                        <option value="Rana">Rana</option>
-                        <option value="Masud">Masud</option>
-                        <option value="Imran">Imran</option>
+                        <?php
+
+                          foreach ($faculty_list as $key => $data) {
+                        ?>
+
+                          <option value="<?= $data['id'] ?>" ><?= $data['faculty_name'] ?></option>
+
+
+                        <?php 
+                          }
+
+                        ?>
                       </select>
                   </div>
                 </div><!-- col-6 -->
