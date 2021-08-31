@@ -15,7 +15,7 @@
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="fa fa-book" aria-hidden="true"></i>
-            <span class="menu-item-label">Course</span>
+            <span class="menu-item-label">Faculty</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
@@ -35,6 +35,19 @@
         <ul class="sl-menu-sub nav flex-column">
           <li class="nav-item"><a href="batch_insert.php" class="nav-link">Insert</a></li>
           <li class="nav-item"><a href="batch_list.php" class="nav-link">List</a></li>
+        </ul>
+
+
+        <a href="#" class="sl-menu-link">
+          <div class="sl-menu-item">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span class="menu-item-label">Faculty List</span>
+            <i class="menu-item-arrow fa fa-angle-down"></i>
+          </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+          <li class="nav-item"><a href="faculty_insert.php" class="nav-link">Insert</a></li>
+          <li class="nav-item"><a href="faculty_list.php" class="nav-link">List</a></li>
         </ul>
 
 
