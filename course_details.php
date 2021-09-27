@@ -22,10 +22,13 @@
 		    mysqli_free_result($result);
 		    return $row;
 		}
+		if(isset($_GET['id']))
+		{
+			$course_id = $_GET['id'];
+		}
 
-
-		$course_list = fetch_all_data_usingPDO($pdo, "select * from course order by id DESC");
-
+		$course_details = fetch_all_data_usingDB($db, "select * from course where id = '$course_id'");
+		
 ?>
 
 <!DOCTYPE html>
@@ -72,43 +75,39 @@
 
 <div class="container">
 	<h2 class="text-center">
-		Courses We Offer 
+		<?=$course_details['course_name'] ?>
 	</h2>
 
 
-	<div class="row">
+	<div class="row mt-5">
 
-		<?php 
-
-
-			foreach ($course_list as $key => $data) {
-		?>
-
-
-		<div class="col-4">
-
-			<a href="course_details.php?id= <?= $data['id'] ?>" style="color:black;text-decoration:none;">
+		
+		<div class="col-6">
 			<img src="<?php 
 
-			$str =explode("../",$data['image']);
+			$str =explode("../",$course_details['image']);
 
 			echo $str[1];
 			  ?>" style="width: 10rem;">
-			<p>Course Name: 
-				<span style="font-weight: 700;">
-					<?= $data['course_name'] ?>
-				</span>
-				
-			</p>
-
-			</a>
 		</div>
 
-		<?php 
-			}
+		<div class="col-6">
+			<h4>Course Details</h4>
+			<br>
+			<p>
+				<?= $course_details['course_details'] ?>
+			</p>
 
-		?>
+		</div>
 		
+	</div>
+
+	<div class="row mt-3">
+		<div class="row">
+			<div class="col">
+				
+			</div>
+		</div>
 	</div>
 </div>
 
