@@ -15,6 +15,21 @@ if(isset($_GET['enroll_id']) && isset($_GET['cod']))
 
 	 $amount = $batch_details['amount'];
 
+
+	 $check= fetch_all_data_usingDB($db, "select count(*) as 'count' from enrollment where student_id = '$user_id' and batch_id = '$batch_id'");
+
+	
+
+	 if($check['count'] != 0)
+	 {
+
+		header("Location: course_details.php?id=$course_id&exist=on");
+
+	 	die();
+	 }
+
+
+
 	 $sql = "INSERT INTO enrollment (batch_id,student_id,amount,status) VALUES ('$batch_id', '$user_id', '$amount',0)";
 		$db->query($sql);
 

@@ -121,6 +121,21 @@
             }
           ?>
 
+          <?php
+
+            if(isset($_GET['exist']))
+            {
+          ?>
+
+           <div class="alert alert-danger alert-dismissible" style="height: 50px;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+             Course Already Enrolled!
+          </div>
+          
+          <?php 
+            }
+          ?>
+
   <h2>Available Batches</h2>
   
   <table class="table table-striped">
