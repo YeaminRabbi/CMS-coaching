@@ -120,8 +120,8 @@
                       <option >--Select Option--</option>
                       <option value="8:30am-10:00pm">8:30am-10:00pm</option>
                       <option value="10:30am-12:00pm">10:30am-12:00pm</option>
-                      <option value="1:30pc-3:00pm">1:30pm-3:00pm</option>
-                      <option value="3:30pc-5:00pm">3:30pm-5:00pm</option>
+                      <option value="1:30pm-3:00pm">1:30pm-3:00pm</option>
+                      <option value="3:30pm-5:00pm">3:30pm-5:00pm</option>
 
 
                     </select>

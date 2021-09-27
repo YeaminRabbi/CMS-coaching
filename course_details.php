@@ -28,7 +28,8 @@
 		}
 
 		$course_details = fetch_all_data_usingDB($db, "select * from course where id = '$course_id'");
-		
+		$batches = fetch_all_data_usingPDO($pdo, "select * from batch where course_id ='$course_id' and seat>0 ORDER by id DESC");
+
 ?>
 
 <!DOCTYPE html>
@@ -102,18 +103,50 @@
 		
 	</div>
 
-	<div class="row mt-3">
-		<div class="row">
-			<div class="col">
-				
-			</div>
-		</div>
-	</div>
 </div>
 
 
 
+<div class="container mt-3">
+  <h2>Available Batches</h2>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Batch Code</th>
+        <th>Batch name</th>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Fees</th>
+        <th>Available Seat</th>
 
+      </tr>
+    </thead>
+    <tbody>
+
+
+    	<?php 
+
+    		foreach ($batches as $key => $data) {
+    	?>
+	 		<tr>
+		        <td><?= $data['batch_code'] ?></td>
+		        <td><?= $data['batch_name'] ?></td>
+		        <td><?= $data['schedule_day'] ?></td>
+		        <td><?= $data['schedule_time'] ?></td>
+		        <td><?= $data['amount'] ?></td>
+		        <td><?= $data['seat'] ?></td>
+
+		      </tr>
+    	<?php 
+    		}
+
+    	?>
+     
+      
+    </tbody>
+  </table>
+</div>
 
 
 
