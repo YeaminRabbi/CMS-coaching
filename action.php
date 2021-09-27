@@ -14,10 +14,10 @@
 		
 		$password=$_POST['password'];
 	
-		$sql = "INSERT INTO users (username,email,dob,nid,phone,address,password) VALUES ('$name', '$email', '$dob','$nid','$phone','$address','$password')";
+		$sql = "INSERT INTO users (username,email,dob,nid,contact,address,password) VALUES ('$name', '$email', '$dob','$nid','$phone','$address','$password')";
 		$db->query($sql);
 
-		header('Location: user_registration.php?imsg=insert');
+		header('Location: register.php?imsg=insert');
 
 	}
 

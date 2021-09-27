@@ -128,9 +128,10 @@
 			      	if(isset($_GET['imsg']))
 			      	{
 			      ?>	
-
+			      <br>
+			      <br>
 			      <span style="color: green;font-weight: 700;">Your informations have been submitted</span>
-			      <a href="user_login.php" class="btn btn-warning">Login</a>
+			      <br><a href="login.php" class="btn btn-warning">Login</a>
 			      <?php 
 			      	}
 
