@@ -136,6 +136,7 @@
 		        <td><?= $data['schedule_time'] ?></td>
 		        <td><?= $data['amount'] ?></td>
 		        <td><?= $data['seat'] ?></td>
+		        <td><a href="login.php" class="btn btn-primary">Enroll</a></td>
 
 		      </tr>
     	<?php 

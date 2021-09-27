@@ -51,7 +51,9 @@
 	  
 	  <div class="container">
 	  	
-	 <ul class="navbar-nav">
+	  
+	  <!-- Links -->
+	  <ul class="navbar-nav">
 	    <li class="nav-item">
 	      <a class="nav-link" href="index.php">Home</a>
 	    </li>
@@ -62,52 +64,80 @@
 	      <a class="nav-link" href="register.php">Register</a>
 	    </li>
 	  </ul>
+
 	  </div>
 	</nav>
 
 
-
 <div class="container">
-	<h2 class="text-center">
-		Courses We Offer 
-	</h2>
-
-
-	<div class="row">
-
-		<?php 
-
-
-			foreach ($course_list as $key => $data) {
-		?>
-
-
-		<div class="col-4">
-
-			<a href="course_details.php?id= <?= $data['id'] ?>" style="color:black;text-decoration:none;">
-			<img src="<?php 
-
-			$str =explode("../",$data['image']);
-
-			echo $str[1];
-			  ?>" style="width: 10rem;">
-			<p>Course Name: 
-				<span style="font-weight: 700;">
-					<?= $data['course_name'] ?>
-				</span>
+		<div class="registration_form">
+			<h3 class="text-center">Student Registration Form</h3>
+			<form action="action.php" method="POST" enctype="multipart/form-data">
 				
-			</p>
+			  <div class="row">
+			    <div class="col">
+			      <label>Name:</label>
+			      <input type="text" class="form-control" placeholder="Enter name" name="name">
+			    </div>
 
-			</a>
+			    <div class="col">
+			      <label>Email:</label>
+			      <input type="email" class="form-control" placeholder="Enter email" name="email">
+			    </div>
+
+			    <div class="col">
+			      <label>Date of Birth:</label>
+			      <input type="date" class="form-control" placeholder="Enter Birth date" name="dob">
+			    </div>
+			  </div>
+
+			  <div class="row mt-4">
+			    <div class="col">
+			      <label>Phone Number:</label>
+			      <input type="text" class="form-control" placeholder="Enter phone number" name="phone">
+			    </div>
+
+			    <div class="col">
+			      <label>NID/Birth Certificate:</label>
+			      <input type="text" class="form-control" placeholder="Enter NID no." name="nid">
+			    </div>
+
+			    <div class="col">
+			      <label>Address:</label>
+			      <input type="text" class="form-control" placeholder="Enter Address" name="address">
+			    </div>
+			  
+
+			  
+
+			    <div class="col">
+			      <label>Password:</label>
+			      <input type="password" class="form-control" placeholder="Enter Password" name="password">
+			    </div>
+
+			   
+			  </div>
+
+			    
+			  <button class="btn btn-outline-primary mt-3" name="btn-register">Submit</button>
+
+			  
+			</form>
+			<?php 
+
+			      	if(isset($_GET['imsg']))
+			      	{
+			      ?>	
+
+			      <span style="color: green;font-weight: 700;">Your informations have been submitted</span>
+			      <a href="user_login.php" class="btn btn-warning">Login</a>
+			      <?php 
+			      	}
+
+			      ?>
 		</div>
-
-		<?php 
-			}
-
-		?>
-		
 	</div>
-</div>
+
 
 
 
