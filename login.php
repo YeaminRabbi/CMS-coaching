@@ -319,7 +319,7 @@ input[type=password]:placeholder {
 	    </div>
 	    <h5 class="text-center">Welcome to CMS</h5>
 	    <!-- Login Form -->
-	    <form action="user_login_backend.php" method="POST">
+	    <form action="action.php" method="POST">
 	      
 	      <input type="text" id="login" class="fadeIn second" autocomplete="on" name="email" placeholder="Email">
 
