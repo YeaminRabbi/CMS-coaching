@@ -1,5 +1,20 @@
 <?php 
 	
+
+
+	session_start();
+    if(!empty($_SESSION['user']))
+    {
+        $user = $_SESSION['user'];
+        $user_name = $user['username'];
+    }
+    else
+    {
+      header('Location: ../login.php');
+
+    }
+
+
 	require '../db_config.php';
 
 
@@ -43,27 +58,8 @@
 
 
 
+<?php require 'navbar.php';  ?>
 
-
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-	  <!-- Brand/logo -->
-	  <a class="navbar-brand" href="#">CMS</a>
-	  
-	  <div class="container">
-	  	
-	 <ul class="navbar-nav">
-	    <li class="nav-item">
-	      <a class="nav-link" href="index.php">Home</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="login.php">Login</a>
-	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" href="register.php">Register</a>
-	    </li>
-	  </ul>
-	  </div>
-	</nav>
 
 
 
