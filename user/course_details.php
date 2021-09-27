@@ -103,7 +103,24 @@
 
 
 
+
+
 <div class="container mt-3">
+  <?php
+
+            if(isset($_GET['update']))
+            {
+          ?>
+
+           <div class="alert alert-success alert-dismissible" style="height: 50px;">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+             Course Enrolled Successfully! Check Pending List
+          </div>
+          
+          <?php 
+            }
+          ?>
+
   <h2>Available Batches</h2>
   
   <table class="table table-striped">
@@ -132,7 +149,7 @@
 		        <td><?= $data['schedule_time'] ?></td>
 		        <td><?= $data['amount'] ?></td>
 		        <td><?= $data['seat'] ?></td>
-		        <td><a href="login.php" class="btn btn-primary">Enroll</a></td>
+		        <td><a href="action.php?enroll_id=<?= $data['id'] ?>&cod=<?=$course_id?>" class="btn btn-primary">Enroll</a></td>
 
 		      </tr>
     	<?php 
