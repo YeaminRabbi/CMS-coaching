@@ -45,6 +45,7 @@
 		$course_details = fetch_all_data_usingDB($db, "select * from course where id = '$course_id'");
 		$batches = fetch_all_data_usingPDO($pdo, "select * from batch where course_id ='$course_id' and seat>0 ORDER by id DESC");
 
+		
 ?>
 
 <!DOCTYPE html>
@@ -93,6 +94,7 @@
 				<?= $course_details['course_details'] ?>
 			</p>
 
+			
 		</div>
 		
 	</div>

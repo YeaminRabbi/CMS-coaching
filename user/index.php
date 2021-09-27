@@ -80,7 +80,7 @@
 
 		<div class="col-4">
 
-			<a href="course_details.php?id= <?= $data['id'] ?>" style="color:black;text-decoration:none;">
+			<a href="course_details.php?id=<?= $data['id'] ?>" style="color:black;text-decoration:none;">
 			<img src="<?php 
 
 			$str =explode("../",$data['image']);
