@@ -296,8 +296,41 @@
 			$sql = "UPDATE `enrollment` SET status = 1 WHERE id='$id'";
 
 		$db->query($sql);
+
+		$enrool = fetch_all_data_usingDB($db, "select * from enrollment");
+
+		$batch_id = $enrool['batch_id'];
+
+
+
+		$sql2 = "UPDATE `batch` SET seat =seat - 1 WHERE id='$batch_id'";
+
+		$db->query($sql2);
+
+
 		header("Location: student_pending.php");
 
+		}
+
+
+		function fetch_all_data_usingPDO($pdo,$sql)
+	{
+		
+		$statement = $pdo->prepare($sql);
+		$statement->execute();
+		$row = $statement->fetchAll();
+
+		return $row;
+	}
+
+
+
+	 function fetch_all_data_usingDB($db,$sql){
+			
+			$result = mysqli_query($db,$sql);
+		    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+		    mysqli_free_result($result);
+		    return $row;
 		}
 
 ?>
