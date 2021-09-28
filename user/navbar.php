@@ -13,6 +13,11 @@
 	    <li class="nav-item">
 	      <a class="nav-link" href="pending_course.php">Pending</a>
 	    </li>
+
+	    <li class="nav-item">
+	      <a class="nav-link" href="ongoing_course.php">Ongoing Courses</a>
+	    </li>
+
 	    <li class="nav-item">
 	      <a class="nav-link" href="logout.php">Logout</a>
 	    </li>
