@@ -256,4 +256,48 @@
 
 
 
+	//approving a student to courses
+	
+
+	//code for ajax auto update in cart for product quantities
+	if(isset($_GET['data1'])){
+		
+		$pid =$_POST['data1'];
+		
+
+		$stmt = $db->prepare("update enrollment set status=1 where id=?");
+
+		$stmt-> bind_param("i", $pid);
+		$stmt-> execute();
+
+		//header("Location: student_pending.php");
+
+
+	}
+
+	if(isset($_POST['pid'])){
+		
+		$pid =$_POST['pid'];
+		
+
+		$stmt = $db->prepare("update enrollment set status=1 where id=?");
+
+		$stmt-> bind_param("i", $pid);
+		$stmt-> execute();
+
+
+	}
+
+
+		if(isset($_GET['approve_id']))
+		{
+			$id = $_GET['approve_id'];
+			
+			$sql = "UPDATE `enrollment` SET status = 1 WHERE id='$id'";
+
+		$db->query($sql);
+		header("Location: student_pending.php");
+
+		}
+
 ?>

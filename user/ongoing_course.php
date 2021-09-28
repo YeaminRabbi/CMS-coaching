@@ -83,8 +83,9 @@
         <th>Batch name</th>
         <th>Day</th>
         <th>Time</th>
+        <th>Course Starts</th>
+        <th>Course Ends</th>
       
-        <th>Available Seat</th>
         <th>Faculty Details</th>
 
 
@@ -102,8 +103,10 @@
 		        <td><?= $data['batch_name'] ?></td>
 		        <td><?= $data['schedule_day'] ?></td>
 		        <td><?= $data['schedule_time'] ?></td>
+		        <td><?= $data['starting_date'] ?></td>
+		        <td><?= $data['ending_date'] ?></td>
 		        
-		        <td><?= $data['seat'] ?></td>
+		      
 		        <td>
 		        	<a href="ongoing_course.php?fid=<?=$data['faculty']?>" class="btn btn-success">Faculty Info</a>
 		        </td>

@@ -51,6 +51,19 @@
         </ul>
 
 
+         <a href="#" class="sl-menu-link">
+          <div class="sl-menu-item">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span class="menu-item-label">Approval List</span>
+            <i class="menu-item-arrow fa fa-angle-down"></i>
+          </div><!-- menu-item -->
+        </a><!-- sl-menu-link -->
+        <ul class="sl-menu-sub nav flex-column">
+          <li class="nav-item"><a href="student_pending.php" class="nav-link">Pending</a></li>
+          
+        </ul>
+
+
         
         <ul class="sl-menu-sub nav flex-column">
           <li class="nav-item"><a href="#" class="nav-link">Text Logo</a></li>
